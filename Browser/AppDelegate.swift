@@ -14,6 +14,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
+    func application(app: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        
+        let scheme = url.scheme ?? "no scheme value"
+        let host = url.host ?? "no host value"
+        let path = url.path ?? "no path value"
+        let query = url.query ?? "no query string values"
+        
+        print("Calling Application Bundle ID: " + sourceApplication!)
+        print("Scheme: " + scheme)
+        print("Host: " + host)
+        print("Path: " + path)
+        print("Query String: " + query)
+        
+        return true
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         return true

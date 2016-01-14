@@ -12,6 +12,10 @@
 		266758FB1C40D46D00C94F2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 266758F91C40D46D00C94F2C /* Main.storyboard */; };
 		266758FD1C40D46D00C94F2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 266758FC1C40D46D00C94F2C /* Assets.xcassets */; };
 		266759001C40D46D00C94F2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 266758FE1C40D46D00C94F2C /* LaunchScreen.storyboard */; };
+		26BBA8D91C42C5D2004730C8 /* hideSections.js in Resources */ = {isa = PBXBuildFile; fileRef = 26BBA8D81C42C5D2004730C8 /* hideSections.js */; };
+		26D73DFD1C42D7230066F4CF /* getPosts.js in Resources */ = {isa = PBXBuildFile; fileRef = 26D73DFC1C42D7230066F4CF /* getPosts.js */; };
+		26D73DFF1C42DB250066F4CF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D73DFE1C42DB250066F4CF /* Post.swift */; };
+		26D73E011C4305DB0066F4CF /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D73E001C4305DB0066F4CF /* PostsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		266758FC1C40D46D00C94F2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		266758FF1C40D46D00C94F2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		266759011C40D46D00C94F2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26BBA8D81C42C5D2004730C8 /* hideSections.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = hideSections.js; sourceTree = "<group>"; };
+		26D73DFC1C42D7230066F4CF /* getPosts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = getPosts.js; sourceTree = "<group>"; };
+		26D73DFE1C42DB250066F4CF /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		26D73E001C4305DB0066F4CF /* PostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostsTableViewController.swift; path = ../PostsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +64,14 @@
 			children = (
 				266758F51C40D46D00C94F2C /* AppDelegate.swift */,
 				266758F71C40D46D00C94F2C /* ViewController.swift */,
+				26D73E001C4305DB0066F4CF /* PostsTableViewController.swift */,
+				26D73DFE1C42DB250066F4CF /* Post.swift */,
 				266758F91C40D46D00C94F2C /* Main.storyboard */,
 				266758FC1C40D46D00C94F2C /* Assets.xcassets */,
 				266758FE1C40D46D00C94F2C /* LaunchScreen.storyboard */,
 				266759011C40D46D00C94F2C /* Info.plist */,
+				26BBA8D81C42C5D2004730C8 /* hideSections.js */,
+				26D73DFC1C42D7230066F4CF /* getPosts.js */,
 			);
 			path = Browser;
 			sourceTree = "<group>";
@@ -122,8 +134,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26BBA8D91C42C5D2004730C8 /* hideSections.js in Resources */,
 				266759001C40D46D00C94F2C /* LaunchScreen.storyboard in Resources */,
 				266758FD1C40D46D00C94F2C /* Assets.xcassets in Resources */,
+				26D73DFD1C42D7230066F4CF /* getPosts.js in Resources */,
 				266758FB1C40D46D00C94F2C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26D73DFF1C42DB250066F4CF /* Post.swift in Sources */,
+				26D73E011C4305DB0066F4CF /* PostsTableViewController.swift in Sources */,
 				266758F81C40D46D00C94F2C /* ViewController.swift in Sources */,
 				266758F61C40D46D00C94F2C /* AppDelegate.swift in Sources */,
 			);
@@ -286,6 +302,7 @@
 				266759061C40D46D00C94F2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
