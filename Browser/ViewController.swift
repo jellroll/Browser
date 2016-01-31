@@ -252,6 +252,56 @@ class ViewController: UIViewController, UITextFieldDelegate, WKNavigationDelegat
         }
     }
     
+    func webView(webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation){
+        print("webView:\(webView) didReceiveServerRedirectForProvisionalNavigation:\(navigation)")
+        
+        let redirectedURL: NSURL = webView.URL!
+        let redirectedURLString = String(redirectedURL)
+        print("Redirected URL: " + redirectedURLString)
+        
+        if let queryString = redirectedURL.query {
+            
+            print("Query String: " + queryString)
+            
+            if let access_token = getQueryStringItem(redirectedURLString, param: "access_token") {
+                print("access_token: " + access_token)
+            }
+          
+            if let service = getQueryStringItem(redirectedURLString, param: "service") {
+                print("service: " + service)
+            }
+            
+            if let ltmpl = getQueryStringItem(redirectedURLString, param: "ltmpl") {
+                print("ltmpl: " + ltmpl)
+            }
+            
+            if let gws_rd = getQueryStringItem(redirectedURLString, param: "gws_rd") {
+                print("gws_rd: " + gws_rd)
+            }
+            
+            
+        } else {
+            print("No query string found.")
+        }
+    }
+
+    
+    func getQueryStringItem(redirectedURLString: String, param: String) -> String? {
+        
+        if let urlComponents = NSURLComponents(string: redirectedURLString) {
+        
+            return (urlComponents.queryItems! as [NSURLQueryItem])
+                .filter({ (item) in item.name == param }).first?
+                .value!
+        } else {
+            print("Could not get url components")
+            return nil
+        }
+        
+    }
+
+
+
     
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
